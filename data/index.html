@@ -1,0 +1,46 @@
+h1. Welcome!
+
+Welcome to your brand new Borg installation!
+
+This file (index.html) should contain the welcome message presented to your users when they arrive on your site homepage.
+Keep it short (or leave it completely empty if you don't need it) since borg will fill the rest of your
+homepage with blog contents.
+
+Once you logged in, you can edit any page by accessing the @edit/path/to/yourpage.html@ url (for example, @edit/index.html@ to edit this page).
+
+Borg expects site contents to be organized according to this directory structure:
+<pre><code>
+  ['data' directory root, as configured in your borg config file]
+  |
+  |_ toolbar.html : main site toolbar
+  |_ sidebar.html : main site sidebar
+  |_ editbar.html : sidebar contents to be shown as help while editing a page
+  |
+
+  Blog contents are organized by year, month, day. For example, a blog post
+  for April 25th, 2011, will be stored as 2011/04/25/blogpost.html.
+  
+  |
+  |_ [year]
+  |  |_ [month]
+  |     |_ [day]
+  |        |_ page.html
+  |
+
+  Other pages are stored in a hierarchical structure of your choice:
+
+  |
+  |_ projects/
+  |  |_ project_one.html
+  |  |_ secret_ones/
+  |     |_ secret_project.html
+  |
+  |_ hobbies/
+     |_ myhobbies.html
+
+</code></pre>
+
+Both sidebars and toolbars can be organized hierarchially. This means that if you create a @sidebar.html@ file
+in @projects/secret_ones/@, then all pages living under that directory will use such sidebar instead of the main
+site sidebar.
+
